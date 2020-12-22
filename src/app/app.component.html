@@ -1,3 +1,158 @@
-<h1>a</h1>
-<div class="container">
-<mat-slider thumbLabel tickInterval="1" min="0" max="10" step="1" value="1"></mat-slider></div>
+<div class="container mt-5">
+<label for="prevCPI">Enter previous CPI  </label>
+<input type="text" name="prevCPI" [(ngModel)]="prevCPI"> <br>
+
+<label for="prevCredits">Enter previous Credits  </label>
+<input type="text" name="prevCredits" [(ngModel)]="prevCredits">
+
+  <div class="row mt-5">
+    <div class="col-sm">
+      <label for="Course">Course name:</label>
+      <input type="text" name="Course">
+    </div>
+    <div class="col-sm">
+      <mat-slider #credits1 thumbLabel tickInterval="1" min="0" max="8" step="1" value="0" (input)="get_credits1($event);calculate_cpi();"></mat-slider>
+      {{credits1.value}}
+    </div>
+    <div class="col-sm">
+      <mat-slider #grade1 thumbLabel tickInterval="1" min="0" max="10" step="1" value="0" (input)="get_grade1($event);calculate_cpi();"></mat-slider>
+      {{grade1.value}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <label for="Course">Course name:</label>
+      <input type="text" name="Course">
+    </div>
+    <div class="col-sm">
+      <mat-slider #credits2 thumbLabel tickInterval="1" min="0" max="8" step="1" value="0" (input)="get_credits2($event);calculate_cpi();"></mat-slider>
+      {{credits2.value}}
+    </div>
+    <div class="col-sm">
+      <mat-slider #grade2 thumbLabel tickInterval="1" min="0" max="10" step="1" value="0" (input)="get_grade2($event);calculate_cpi();"></mat-slider>
+      {{grade2.value}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <label for="Course">Course name:</label>
+      <input type="text" name="Course">
+    </div>
+    <div class="col-sm">
+      <mat-slider #credits3 thumbLabel tickInterval="1" min="0" max="8" step="1" value="0" (input)="get_credits3($event);calculate_cpi();"></mat-slider>
+      {{credits3.value}}
+    </div>
+    <div class="col-sm">
+      <mat-slider #grade3 thumbLabel tickInterval="1" min="0" max="10" step="1" value="0" (input)="get_grade3($event);calculate_cpi();"></mat-slider>
+      {{grade3.value}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <label for="Course">Course name:</label>
+      <input type="text" name="Course">
+    </div>
+    <div class="col-sm">
+      <mat-slider #credits4 thumbLabel tickInterval="1" min="0" max="8" step="1" value="0" (input)="get_credits4($event);calculate_cpi();"></mat-slider>
+      {{credits4.value}}
+    </div>
+    <div class="col-sm">
+      <mat-slider #grade4 thumbLabel tickInterval="1" min="0" max="10" step="1" value="0" (input)="get_grade4($event);calculate_cpi();"></mat-slider>
+      {{grade4.value}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <label for="Course">Course name:</label>
+      <input type="text" name="Course">
+    </div>
+    <div class="col-sm">
+      <mat-slider #credits5 thumbLabel tickInterval="1" min="0" max="8" step="1" value="0" (input)="get_credits5($event);calculate_cpi();"></mat-slider>
+      {{credits5.value}}
+    </div>
+    <div class="col-sm">
+      <mat-slider #grade5 thumbLabel tickInterval="1" min="0" max="10" step="1" value="0" (input)="get_grade5($event);calculate_cpi();"></mat-slider>
+      {{grade5.value}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <label for="Course">Course name:</label>
+      <input type="text" name="Course">
+    </div>
+    <div class="col-sm">
+      <mat-slider #credits6 thumbLabel tickInterval="1" min="0" max="8" step="1" value="0" (input)="get_credits6($event);calculate_cpi();"></mat-slider>
+      {{credits6.value}}
+    </div>
+    <div class="col-sm">
+      <mat-slider #grade6 thumbLabel tickInterval="1" min="0" max="10" step="1" value="0" (input)="get_grade6($event);calculate_cpi();"></mat-slider>
+      {{grade6.value}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <label for="Course">Course name:</label>
+      <input type="text" name="Course">
+    </div>
+    <div class="col-sm">
+      <mat-slider #credits7 thumbLabel tickInterval="1" min="0" max="8" step="1" value="0" (input)="get_credits7($event);calculate_cpi();"></mat-slider>
+      {{credits7.value}}
+    </div>
+    <div class="col-sm">
+      <mat-slider #grade7 thumbLabel tickInterval="1" min="0" max="10" step="1" value="0" (input)="get_grade7($event);calculate_cpi();"></mat-slider>
+      {{grade7.value}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <label for="Course">Course name:</label>
+      <input type="text" name="Course">
+    </div>
+    <div class="col-sm">
+      <mat-slider #credits8 thumbLabel tickInterval="1" min="0" max="8" step="1" value="0" (input)="get_credits8($event);calculate_cpi()"></mat-slider>
+      {{credits8.value}}
+    </div>
+    <div class="col-sm">
+      <mat-slider #grade8 thumbLabel tickInterval="1" min="0" max="10" step="1" value="0" (input)="get_grade8($event);calculate_cpi();"></mat-slider>
+      {{grade8.value}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <label for="Course">Course name:</label>
+      <input type="text" name="Course">
+    </div>
+    <div class="col-sm">
+      <mat-slider #credits9 thumbLabel tickInterval="1" min="0" max="8" step="1" value="0" (input)="get_credits9($event);calculate_cpi();"></mat-slider>
+      {{credits9.value}}
+    </div>
+    <div class="col-sm">
+      <mat-slider #grade9 thumbLabel tickInterval="1" min="0" max="10" step="1" value="0" (input)="get_grade9($event);calculate_cpi();"></mat-slider>
+      {{grade9.value}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <label for="Course">Course name:</label>
+      <input type="text" name="Course">
+    </div>
+    <div class="col-sm">
+      <mat-slider #credits10 thumbLabel tickInterval="1" min="0" max="8" step="1" value="0" (input)="get_credits10($event);calculate_cpi();"></mat-slider>
+      {{credits10.value}}
+    </div>
+    <div class="col-sm">
+      <mat-slider #grade10 thumbLabel tickInterval="1" min="0" max="10" step="1" value="0" (input)="get_grade10($event);calculate_cpi();"></mat-slider>
+      {{grade10.value}}
+    </div>
+  </div>
+  <h2 class="text-center">CPI:{{cpi}}</h2>
+</div>
