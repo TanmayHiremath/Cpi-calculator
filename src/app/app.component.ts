@@ -10,6 +10,7 @@ export class AppComponent {
   prevCPI='0';
   prevCredits='0';
   cpi=0;
+  spi=0;
   grade1=0;grade2=0;grade3=0;grade4=0;grade5=0;grade6=0;grade7=0;grade8=0;grade9=0;grade10=0;
   credits1=0;credits2=0;credits3=0;credits4=0;credits5=0;credits6=0;credits7=0;credits8=0;credits9=0;credits10=0;
   get_credits1(event){this.credits1 = parseInt(event.value);}
@@ -44,7 +45,13 @@ export class AppComponent {
 
   calculate_cpi(){
     this.cpi= (parseFloat(this.prevCPI)*parseInt(this.prevCredits)+this.grade1*this.credits1+this.grade2*this.credits2+this.grade3*this.credits3+this.grade4*this.credits4+this.grade5*this.credits5+this.grade6*this.credits6+this.grade7*this.credits7+this.grade8*this.credits8+this.grade9*this.credits9+this.grade10*this.credits10)/(parseInt(this.prevCredits)+this.credits1+this.credits2+this.credits3+this.credits4+this.credits5+this.credits6+this.credits7+this.credits8+this.credits9+this.credits10)
-  }
+    this.cpi = parseFloat(this.cpi.toFixed(3))
 
+
+
+    this.spi = (this.grade1*this.credits1+this.grade2*this.credits2+this.grade3*this.credits3+this.grade4*this.credits4+this.grade5*this.credits5+this.grade6*this.credits6+this.grade7*this.credits7+this.grade8*this.credits8+this.grade9*this.credits9+this.grade10*this.credits10)/(this.credits1+this.credits2+this.credits3+this.credits4+this.credits5+this.credits6+this.credits7+this.credits8+this.credits9+this.credits10)
+    this.spi = parseFloat(this.spi.toFixed(3))
+
+  }
 
 }
